@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>BLIS | Business Logistics Intelligent Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #117A65;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .nav-container {
+      max-width: 960px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .logo {
+      font-size: 1.3em;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #D4EFDF;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #117A65;
+        flex-direction: column;
+        display: none;
+        padding: 10px 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+
+    .spacer {
+      height: 70px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #117A65;
+    }
+
+    #inicio {
+      position: relative;
+      height: 90vh;
+      background-image: url('fondo-logistico.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    #inicio div {
+      background-color: rgba(17,122,101,0.75);
+      padding: 40px;
+      border-radius: 10px;
+    }
+
+    #inicio a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background-color: #D4AF37;
+      color: #2E4053;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="logo">BLIS</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Quiénes Somos</a>
+        <a href="#vision-mision">Visión & Misión</a>
+        <a href="#valores">Valores</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="spacer"></div>
+
+  <section id="inicio">
+    <div>
+      <h1>BLIS</h1>
+      <h2>Business Logistics Intelligent Solutions</h2>
+      <p>Conectando lo local con lo global a través de soluciones logísticas inteligentes</p>
+      <a href="#contacto">Contáctanos</a>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2>Quiénes Somos</h2>
+    <p>Empresa salvadoreña comprometida con brindar soluciones logísticas confiables en transporte terrestre...</p>
+  </section>
+
+  <section id="vision-mision">
+    <h2>Visión & Misión</h2>
+    <h3>Visión</h3>
+    <p>Ser la empresa líder en servicios de logística, transporte y representación comercial.</p>
+    <h3>Misión</h3>
+    <p>Brindar y garantizar un servicio logístico seguro y personalizado, como cada cliente se lo merece.</p>
+  </section>
+
+  <section id="valores">
+    <h2>Valores</h2>
+    <h3>Discreción</h3>
+    <p>Nos comprometemos a proteger toda información relacionada con nuestros clientes...</p>
+    <h3>Responsabilidad</h3>
+    <p>Gestionamos nuestras operaciones con puntualidad, planificación y transparencia...</p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <ul>
+      <li>Transporte terrestre (contenedores, furgones secos y refrigerados)</li>
+      <li>Camiones de bajo tonelaje</li>
+      <li>Representación comercial</li>
+      <li>Asesoría financiera</li>
+      <li>Coordinación logística</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📱 +503 6142 4047</p>
+    <p>🌐 Facebook / Instagram: BLIS</p>
+    <p>✉️ salvadoraquino@blis.com</p>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
